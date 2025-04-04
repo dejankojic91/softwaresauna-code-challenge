@@ -1,29 +1,3 @@
-// import { describe, it, expect } from 'vitest';
-// import { walk } from '../core/walker';
-// import { maps, validMaps } from '../data/maps';
-// import { MapKey } from '../types/maps.types';
-
-// describe('walk()', () => {
-//   it('returns expected letters and path for "Basic"', () => {
-//       const mapData = Object.keys(validMaps)[0] as MapKey;
-//       const result = walk(maps[mapData]);
-
-//     expect(result.letters).toBe('ACB');
-//     expect(result.path).toBe('@---A---+|C|+---+|+-B-x');
-//   });
-
-//   it('throws error for missing start', () => {
-//     const invalidMap = `
-//       -A---+
-//            |
-//       x-B-+   C
-//           |   |
-//           +---+
-//     `;
-//     expect(() => walk(invalidMap)).toThrow(/Start character '@' not found/);
-//   });
-// });
-
 import { describe, it, expect } from 'vitest';
 import { walk } from '../core/walker';
 import { validMaps, invalidMaps } from '../data/maps';
