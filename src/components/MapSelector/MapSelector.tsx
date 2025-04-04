@@ -21,7 +21,7 @@ const MapSelector: React.FC<MapSelectorProps> = ({
         id={selectId}
         value={selected}
         onChange={(e) => onChange(e.target.value as MapKey)}
-        className="border px-2 py-1 rounded bg-white shadow"
+        className=" w-full sm:w-auto border px-2 py-1 rounded bg-white shadow"
       >
         {keys.map((key) => (
           <option key={key} value={key}>

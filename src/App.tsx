@@ -35,7 +35,7 @@ const App = () => {
   return (
     <div className="p-5 font-sans max-w-xl mx-auto">
       <h1 className="text-3xl font-bold mb-4">Map Path Traversal</h1>
-      <div className="flex items-center gap-4 mb-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 mb-4">
         <MapSelector
           selected={selectedMap}
           onChange={handleMapChange}
