@@ -1,7 +1,16 @@
+# Getting Started
+
+## Installation
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/dejankojic91/softwaresauna-code-challenge.git
+cd softwaresauna-code-challenge
+npm install
+```
+
 ## Running the Project
-
 To start the development server with hot-reloading:
-
 
 ```bash
 npm run dev
