@@ -11,7 +11,7 @@ describe('MapPreview Component', () => {
           |   |
           +---+
     `;
-    render(<MapPreview mapData={mapData} />);
+    render(<MapPreview content={mapData} />);
 
     const previewElement = screen.getByText(/@---A---\+/);
     expect(previewElement).toBeInTheDocument();

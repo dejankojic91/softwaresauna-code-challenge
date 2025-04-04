@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import ErrorDisplay from './ErrorDisplay';
+import ErrorMessage from './ErrorMessage';
 
-describe('ErrorDisplay Component', () => {
+describe('ErrorMessage Component', () => {
   it('renders the error message', () => {
     const errorMessage = 'Something went wrong.';
-    render(<ErrorDisplay message={errorMessage} />);
+    render(<ErrorMessage message={errorMessage} />);
 
     const errorElement = screen.getByText(errorMessage);
     expect(errorElement).toBeInTheDocument();

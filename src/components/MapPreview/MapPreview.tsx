@@ -1,10 +1,10 @@
 interface MapPreviewProps {
-  mapData: string;
+  content: string;
   status?: 'success' | 'error' | 'default';
 }
 
 const MapPreview: React.FC<MapPreviewProps> = ({
-  mapData,
+  content,
   status = 'default',
 }) => {
   const borderColor =
@@ -18,9 +18,10 @@ const MapPreview: React.FC<MapPreviewProps> = ({
     <div className="my-4">
       <h2 className="text-xl font-semibold mb-2">Map Preview</h2>
       <pre
+        aria-live="polite"
         className={`bg-gray-100 p-4 rounded border-2 whitespace-pre-wrap ${borderColor}`}
       >
-        {mapData}
+        {content}
       </pre>
     </div>
   );
