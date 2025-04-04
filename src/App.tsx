@@ -35,18 +35,25 @@ const App = () => {
   return (
     <div className="p-5 font-sans max-w-xl mx-auto">
       <h1 className="text-3xl font-bold mb-4">Map Path Traversal</h1>
-      <MapSelector
-        selected={selectedMap}
-        onChange={handleMapChange}
-        keys={mapKeys}
+      <div className="flex items-center gap-4 mb-4">
+        <MapSelector
+          selected={selectedMap}
+          onChange={handleMapChange}
+          keys={mapKeys}
+        />
+        <button
+          onClick={handleStart}
+          className="px-4 py-1 text-lg mb-4 bg-blue-500 text-white rounded hover:bg-blue-600"
+        >
+          Start Walk
+        </button>
+      </div>
+
+      <MapPreview
+        mapData={maps[selectedMap]}
+        status={result ? 'success' : error ? 'error' : 'default'}
       />
-      <MapPreview mapData={maps[selectedMap]} />
-      <button
-        onClick={handleStart}
-        className="px-4 py-2 text-lg mb-4 bg-blue-500 text-white rounded hover:bg-blue-600"
-      >
-        Start Walk
-      </button>
+
       {result && <ResultDisplay letters={result.letters} path={result.path} />}
       {error && <ErrorDisplay message={error} />}
     </div>
